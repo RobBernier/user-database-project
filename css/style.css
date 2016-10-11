@@ -1,0 +1,277 @@
+  /*
+      Advanced Web Project Stylesheet
+
+      Default Input ->
+      Default button-> Hover: background-color: rgb(0, 215, 255);
+      */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .bg{
+      background: #FFFFFF;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+    body {
+      font-size: 1.2em;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    h1,h2,h3{
+      margin-top:15px;
+      color:#D92A1A;
+    }
+    p{
+      font-size: 90%;
+      margin-top:5px;
+      color:#242424;
+    }
+    a {
+      color:#D92A1A;
+      text-decoration: none;
+    }
+    textarea {
+      font-size: 70%;
+    }
+    input {
+      font-size: 100%;
+    }
+    table {
+      margin: 10px auto 10px auto;
+      text-align: center;
+      background-color: #6a6a6a;
+      border-collapse: collapse;
+    }
+    th,td{
+      padding:5px;
+      border: 2px solid #ffffff;
+    }
+    /*Center Content*/
+    .outer {
+      height: 100%;
+      width: 100%;
+      display: table;
+      vertical-align: middle;
+    }
+    .container {
+      text-align: center;
+      position: relative;
+      vertical-align: middle;
+      display: table-cell;
+    }
+    /*Webpage Divisions*/
+    .login {
+      display: block;
+      padding: 0 5%;
+      height: 100vh;
+    }
+    .login,.main {
+      color: #D92A1A;
+      min-height: 450px;
+      font-size: 150%;
+    }
+    .navigation{
+      position:fixed;
+      top:0px;
+      left:0px;
+      display: block;
+      float:left;
+      width:300px;
+      margin-left: -200px;
+      height:100%;
+      background-color: #D92A1A;
+      /*Animation*/
+      -webkit-animation-name: out;
+      -webkit-animation-duration: .4s;
+      animation-name: out;
+      animation-duration: .4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    .navigation:hover{
+      /*animation*/
+      -webkit-animation-name: in;
+      -webkit-animation-duration: .4s;
+      animation-name: in;
+      animation-duration: .4s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    .navigation:hover > .icon{
+      transition: .1s;
+      opacity: 0;
+  }
+  .icon{
+    position:fixed;
+    margin:45vh 0px 45vh 230px;
+    height: 10vh;
+    color:#FFFFFF;
+  }
+    .nav-item{
+      display:none;
+      padding:20px 50px;
+      text-align: center;
+      margin:auto;
+      text-decoration: none;
+      color: white;
+    }
+    .navigation:hover .nav-item{
+      display:block;
+    }
+    .nav-item:hover{
+      color: white;
+      background-color: #c32516;
+    }
+    .site-wrap{
+      margin: 25px 0px 25px 100px;
+      padding:0px 100px;
+      display:block;
+      color:white;
+    }
+    button,.button{
+      margin: 20px;
+    }
+    button,.button,.logout{
+      border: 0px;
+      padding: 10px;
+      outline: none;
+      font-size: 100%;
+      background-color: Transparent;
+      color: #D92A1A;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bolder;
+      /*Button Transition*/
+      background-image: linear-gradient(to top, #D92A1A 50%, rgba(0, 232, 255, 0) 0%);
+      background-size: 100% 200%;
+      -webkit-transition: background-position .2s;
+      -moz-transition: background-position .2s;
+      transition: background-position .2s;
+    }
+    button:hover,.button:hover,.logout:hover {
+      /*hover color is lowered from top*/
+      background-position: 0 -100%;
+      color: #FFFFFF;
+    }
+    #left-bio-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      float: left;
+      height: 50%;
+      width: auto;
+    }
+    #right-bio-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      resize: vertical;
+      height: 50%;
+      float: right;
+      width: 60%;
+    }
+    /*Media Queries*/
+    @media screen and (max-width:1000px) {
+    body{
+      font-size: 1.0em
+    }
+    .site-wrap{
+      padding:0px 20px;
+    }
+    }
+    @media screen and (max-width:650px) {
+      .site-wrap{
+        margin:100px 0px 70px 0px;
+        padding:0px 10px;
+      }
+      .navigation{
+        height:auto;
+        width:100%;
+        margin-left: 0px;
+        margin-top: 15px;
+        padding-top: 25px;
+        padding-bottom:100px;
+        /*Animation*/
+        -webkit-animation-name: up;
+        -webkit-animation-duration: .4s;
+        animation-name: up;
+        animation-duration: .4s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      .navigation:hover{
+        /*animation*/
+        -webkit-animation-name: down;
+        -webkit-animation-duration: .4s;
+        animation-name: down;
+        animation-duration: .4s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      .navigation:hover > .icon{
+        transition: .1s;
+        opacity: 0;
+    }
+    .icon{
+      position:fixed;
+      margin: 50px 45vw 0px 45vw;
+      height: 10vh;
+      color:white;
+    }
+  }
+    @media screen and (max-width:470px) {
+      table{
+        font-size:70%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+      }
+      input{
+        margin-bottom: 0;
+      }
+      button .button{
+        margin: 0;
+      }
+    }
+    @media screen and (max-width:350px) {
+      table{
+        font-size:60%;
+        overflow-x: auto;
+      }
+    }
+
+  @keyframes fadeinboxes {
+    from {
+      opacity: 0
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+  /* Navigation Animation Styles (Horizontal Navigation)*/
+  @-webkit-keyframes in {
+      from {margin-left: -200px;}
+      to {width:300px;margin-left: 0px;}
+  }
+
+  @-webkit-keyframes out {
+      from {width:300px;margin-left: 0px;}
+      to {margin-left: -200px;}
+  }
+
+  /* Navigation Animation Styles (Vertical Navigation)*/
+  @-webkit-keyframes down {
+      from {margin-top: -100px;}
+      to {margin-top: 0px;}
+  }
+  @-webkit-keyframes up {
+    from {margin-top: 0px;}
+    to {margin-top: -50px;}
+  }
